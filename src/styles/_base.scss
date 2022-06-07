@@ -4,9 +4,15 @@
 
 body {
   margin: 0;
-  padding: 0 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+
+  // padding: 0 2rem;
+  // max-width: 1200px;
+  // margin: 0 auto;
+}
+
+footer {
+  height: 80px;
+  background-color: var(--pc-3);
 }
 
 button {
@@ -14,4 +20,52 @@ button {
   border: none;
   background: none;
   cursor: pointer;
+}
+
+// typography
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-1);
+}
+
+h1,
+h2 {
+  font-weight: var(--fw-bold);
+}
+
+h1 {
+  font-size: 3.125rem;
+  line-height: 1;
+  letter-spacing: -0.45px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.05;
+  letter-spacing: -0.36px;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 1.125;
+  letter-spacing: -0.29px;
+  font-weight: var(--fw-reg);
+}
+
+p,
+p.alt {
+  font-family: var(--ff-2);
+  font-weight: var(--fw-reg);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.875;
+}
+
+p.alt {
+  font-size: 0.9375rem;
+  line-height: 2;
 }

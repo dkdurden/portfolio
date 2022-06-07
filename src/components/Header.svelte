@@ -1,6 +1,14 @@
 <script>
+  import { onMount } from "svelte";
+
   let showNav = false;
   let width;
+
+  let currentPath;
+
+  onMount(() => {
+    currentPath = window.location.pathname;
+  });
 
   function toggleNav() {
     showNav = !showNav;
@@ -32,9 +40,17 @@
   <nav>
     {#if showNav || width >= 768}
       <ul id="menu">
-        <li><a href="/">Home</a></li>
-        <li><a href="portfolio">Portfolio</a></li>
-        <li><a href="/contact">Contact Me</a></li>
+        <li><a href="/" class:active={currentPath === "/"}>Home</a></li>
+        <li>
+          <a href="portfolio" class:active={currentPath === "/portfolio"}
+            >Portfolio</a
+          >
+        </li>
+        <li>
+          <a href="/contact" class:active={currentPath === "/contact"}
+            >Contact Me</a
+          >
+        </li>
       </ul>
     {/if}
   </nav>
@@ -49,6 +65,7 @@
     width: 100%;
     height: 32px;
     margin-top: 2rem;
+    margin-bottom: 2.5rem;
   }
 
   nav {
@@ -80,6 +97,11 @@
     letter-spacing: 2px;
     font-family: var(--ff-2);
     color: white;
+  }
+
+  a:global(.active),
+  a:hover {
+    color: var(--pc-1);
   }
 
   @media (min-width: 768px) {

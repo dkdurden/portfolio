@@ -6,13 +6,28 @@
   --ff-1: "Ibarra Real Nova", serif;
   --ff-2: "Public Sans", sans-serif;
 
+  --fw-reg: 400;
+  --fw-bold: 700;
+
   // colors
 
-  --pc-1: hsl(167°, 36%, 54%);
-  --pc-2: hsl(205°, 41%, 21%);
+  --pc-1: #5fb4a2;
+  --pc-1-hsl: hsl(167, 36%, 54%);
+  --pc-1-rgb: rgb(95, 180, 162);
+  --pc-2: #203a4c;
+  --pc-2-hsl: hsl(205, 41%, 21%);
+  --pc-2-rgb: rgb(32, 58, 76);
   --pc-3: #33323d;
+  --pc-3-hsl: hsl(245, 10%, 22%);
+  --pc-3-rgb: #33323d;
 
-  --sc-1: hsl(0°, 0%, 98%);
-  --sc-2: hsl(240°, 2%, 92%);
-  --sc-3: hsl(0°, 90%, 57%);
+  --sc-1: #fafafa;
+  --sc-1-hsl: hsl(0, 0%, 98%);
+  --sc-1-rgb: rgb(250, 250, 250);
+  --sc-2: #eaeaeb;
+  --sc-2-hsl: hsl(240, 2%, 92%);
+  --sc-2-rgb: rgb(234, 234, 235);
+  --sc-3: #f43030;
+  --sc-3-hsl: hsl(0, 90%, 57%);
+  --sc-3-rgb: rgb(244, 48, 48);
 }
