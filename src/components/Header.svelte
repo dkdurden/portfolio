@@ -75,6 +75,8 @@
   }
 
   ul {
+    position: relative;
+    z-index: 10;
     background-color: var(--pc-3);
     padding: 2.5rem 4rem;
     list-style: none;

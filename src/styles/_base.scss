@@ -11,8 +11,13 @@ body {
 }
 
 footer {
-  height: 80px;
   background-color: var(--pc-3);
+  padding: 3.5rem 8.4375rem;
+
+  @media (min-width: 992px) {
+    height: 80px;
+    padding: 0;
+  }
 }
 
 button {

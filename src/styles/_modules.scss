@@ -5,7 +5,18 @@
 .footer-content {
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    @media (min-width: 992px) {
+      flex-direction: row;
+    }
+  }
 
   &__link {
     text-decoration: none;
@@ -16,22 +27,48 @@
     color: white;
 
     & + & {
-      margin-left: 2.625rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 992px) {
+      flex-direction: row;
+
+      & + & {
+        margin-left: 2.625rem;
+        margin-top: 0;
+      }
     }
   }
 
   &__group {
     flex-grow: 1;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-left: 3rem;
+    margin-top: 2.5rem;
+
+    @media (min-width: 992px) {
+      flex-direction: row;
+      margin-left: 3rem;
+      margin-top: 0;
+    }
   }
 
   &__social {
+    margin-top: 2.5rem;
+
     a + a {
       margin-left: 1rem;
     }
+
+    @media (min-width: 992px) {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: 992px) {
+    flex-direction: row;
   }
 }
 
@@ -40,7 +77,11 @@
 .hero,
 .about-me,
 .contact-me {
-  margin-bottom: 9.375rem;
+  margin-bottom: 6rem;
+
+  @media (min-width: 1200px) {
+    margin-bottom: 9.375rem;
+  }
 }
 
 .hero {
@@ -78,28 +119,110 @@
 
 .about-me {
   display: flex;
-
-  .img {
-    flex-basis: 540px;
-  }
+  flex-direction: column;
 
   &__content {
-    // flex-basis: 50%;
-    padding-left: 7.8125rem;
+    position: relative;
+    margin-top: 2.5rem;
 
-    p {
-      max-width: 40ch;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: var(--pc-3);
+      opacity: 0.15;
+    }
+
+    &::after {
+      margin-top: 3.2rem;
+    }
+
+    &::before {
+      margin-bottom: 3.2rem;
+    }
+
+    @media (min-width: 768px) {
+      margin-top: 0rem;
+      padding-left: 4.3rem;
+
+      &::after,
+      &::before {
+        margin-top: 0;
+        width: 350px;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      p {
+        max-width: 35ch;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      padding-left: 7.8125rem;
+
+      p {
+        max-width: 40ch;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+
+    .img {
+      flex-basis: 281px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .img {
+      flex-basis: 540px;
     }
   }
 }
 
 .contact-me {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 
   h2 {
-    max-width: 350px;
+    max-width: 311px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  &__button {
+    flex-shrink: 0;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &__divider {
+      flex-basis: 534px;
+      margin: 0 2rem;
+      height: 1px;
+      background-color: var(--pc-3);
+      opacity: 0.15;
+    }
+
+    h2 {
+      max-width: 350px;
+      text-align: start;
+    }
   }
 }
 
