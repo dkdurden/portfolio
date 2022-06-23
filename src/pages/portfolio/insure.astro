@@ -1,0 +1,108 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ContactMe from "../../components/ContactMe.astro"
+---
+
+<Layout>
+    <div class="img">
+        <picture>
+            <source media="(min-width: 1200px)" 
+                    srcset="/images/detail/desktop/image-insure-hero.jpg,
+                            /images/detail/desktop/image-insure-hero@2x.jpg 2x" />
+
+            <source media="(min-width: 500px)" 
+                    srcset="/images/detail/tablet/image-insure-hero.jpg 689w,
+                            /images/detail/tablet/image-insure-hero@2x.jpg 1378w" />
+
+            <source srcset="/images/detail/mobile/image-insure-hero.jpg 311w,
+                            /images/detail/mobile/image-insure-hero@2x.jpg 622w" />
+
+            <img src="/images/detail/desktop/image-insure-hero.jpg" alt="">
+        </picture>
+    </div>
+
+    <div class="project-grid">
+        <div>
+            <div class="description">
+                <h1 class="description__title h2">Insure</h1>
+                <p class="description__body">
+                    This was a small project which mostly consisted of HTML and CSS. I built a 
+                    fully-responsive landing page. The only JavaScript this project required was 
+                    to enable the toggling of the mobile navigation.
+                </p>
+                <p class="description__tag">Interaction Design / Front End Development</p>
+                <p class="description__tag">HTML / CSS / JS</p>
+                <button class="button__secondary">
+                    <span class="button__text">View Project</span>
+                </button>
+            </div>
+        </div>
+        <div class="overview">
+            <h2 class="overview__title h3">Project Background</h2>
+            <p>
+                This project was a front-end  challenge from Frontend Mentor. It’s a platform that 
+                enables you to practice building websites to a design and project brief. Each challenge 
+                includes mobile and desktop designs to show how the website should look at different 
+                screen sizes. Creating these projects has helped me refine my workflow and solve 
+                real-world coding problems. I’ve learned something new with each project, helping 
+                me to improve and adapt my style.
+            </p>
+
+            <h2 class="overview__title h3">Static Previews</h2>
+            <div class="img overview__image">
+                <picture>
+                    <source media="(min-width: 1200px)"
+                            srcset="/images/detail/desktop/image-insure-preview-1.jpg 635w,
+                                    /images/detail/desktop/image-insure-preview-1@2x.jpg 1270w" 
+                            sizes="44vw" />
+
+                    <source media="(min-width: 500px)"
+                            srcset="/images/detail/tablet/image-insure-preview-1.jpg 689w,
+                                    /images/detail/tablet/image-insure-preview-1@2x.jpg 1378w" />
+
+                    <source srcset="/images/detail/mobile/image-insure-preview-1.jpg 313w,
+                                    /images/detail/mobile/image-insure-preview-1@2x.jpg 626w" />
+
+                    <img src="/images/detail/desktop/image-insure-preview-1.jpg" alt="">
+                </picture>
+            </div>
+            <div class="img overview__image">
+                <picture>
+                    <source media="(min-width: 1200px)"
+                            srcset="/images/detail/desktop/image-insure-preview-2.jpg 635w,
+                                    /images/detail/desktop/image-insure-preview-2@2x.jpg 1270w"
+                            sizes="44vw" />
+
+                    <source media="(min-width: 500px)"
+                            srcset="/images/detail/tablet/image-insure-preview-2.jpg 689w,
+                                    /images/detail/tablet/image-insure-preview-2@2x.jpg 1378w" />
+
+                    <source srcset="/images/detail/mobile/image-insure-preview-2.jpg 313w,
+                                    /images/detail/mobile/image-insure-preview-2@2x.jpg 626w" />
+                    <img src="/images/detail/desktop/image-insure-preview-2.jpg" alt="">
+                </picture>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-links">
+        <div class="project-links__box">
+            <div>
+                <span class="h3">Bookmark</span>
+                <span class="project-links__label" id="prev-label">Previous Project</span>
+            </div>
+            <a class="project-links__link" href="/portfolio/bookmark" aria-labelledby="prev-label"><img src="/images/icons/arrow-left.svg" alt=""></a>
+        </div>
+        <div class="project-links__box">
+            <div>
+                <span class="h3">Fylo</span>
+                <span class="project-links__label" id="next-label">Next Project</span>
+            </div>
+            <a class="project-links__link" href="/portfolio/fylo" aria-labelledby="next-label"><img src="/images/icons/arrow-right.svg" alt=""></a>
+        </div>
+    </div>
+
+    <div class="project-contact">
+        <ContactMe />
+    </div>
+</Layout>
