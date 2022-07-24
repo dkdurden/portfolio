@@ -276,6 +276,11 @@
   margin: 2rem 0;
   position: relative;
 
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+
   &::after,
   &::before {
     content: "";
@@ -334,11 +339,6 @@
     button,
     a {
       margin-bottom: 6rem;
-    }
-
-    a {
-      display: inline-block;
-      text-decoration: none;
     }
 
     p {
