@@ -42,7 +42,7 @@
       <ul id="menu">
         <li><a href="/" class:active={currentPath === "/"}>Home</a></li>
         <li>
-          <a href="portfolio" class:active={currentPath === "/portfolio"}
+          <a href="/portfolio" class:active={currentPath === "/portfolio"}
             >Portfolio</a
           >
         </li>
@@ -78,7 +78,7 @@
     position: relative;
     z-index: 10;
     background-color: var(--pc-3);
-    padding: 2.5rem 4rem;
+    padding: 2.5rem clamp(2rem, 15vw, 4rem);
     list-style: none;
     margin: 0;
   }
