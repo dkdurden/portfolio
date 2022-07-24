@@ -612,8 +612,7 @@
 
 // inputs
 
-.form-control,
-.form-control > :is(input, textarea) {
+.form-control {
   padding: 0.5rem 1rem;
   background-color: var(--pc-3-lightest);
   color: var(--pc-3);
@@ -641,4 +640,14 @@
   display: flex;
   flex-direction: column;
   margin: 1rem 0;
+}
+
+.invalid-text {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  // font-style: italic;
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-2);
+  color: var(--sc-3);
 }

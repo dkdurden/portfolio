@@ -1,5 +1,8 @@
 <script>
   let submitted = false;
+  let nameInvalid = false;
+  let emailInvalid = false;
+  let msgInvalid = false;
 </script>
 
 <form action="" class:submitted>
@@ -12,7 +15,13 @@
       id="name"
       placeholder="Insert your name here..."
       required
+      on:invalid={() => (nameInvalid = true)}
+      on:input={() => (nameInvalid = false)}
     />
+
+    {#if nameInvalid}
+      <span class="invalid-text">This field is required</span>
+    {/if}
   </div>
 
   <div class="form-group">
@@ -24,7 +33,13 @@
       id="email"
       placeholder="example@email.com"
       required
+      on:invalid={() => (emailInvalid = true)}
+      on:input={() => (emailInvalid = false)}
     />
+
+    {#if emailInvalid}
+      <span class="invalid-text">This field is required</span>
+    {/if}
   </div>
 
   <div class="form-group">
@@ -36,7 +51,13 @@
       id="message"
       placeholder="How can I help?"
       required
+      on:invalid={() => (msgInvalid = true)}
+      on:input={() => (msgInvalid = false)}
     />
+
+    {#if msgInvalid}
+      <span class="invalid-text">This field is required</span>
+    {/if}
   </div>
 
   <button class="button__secondary" on:click={() => (submitted = true)}>
