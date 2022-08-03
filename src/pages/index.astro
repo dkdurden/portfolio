@@ -7,7 +7,7 @@ import ContactMe from "../components/ContactMe.astro";
     <div class="hero">
         <div class="img">
             <picture>
-                <source media="(min-width: 1200px)" srcset="/images/homepage/desktop/image-homepage-hero.jpg 1110w,
+                <!-- <source media="(min-width: 1200px)" srcset="/images/homepage/desktop/image-homepage-hero.jpg 1110w,
                                 /images/homepage/desktop/image-homepage-hero@2x.jpg 2220w" />
 
                 <source media="(min-width: 768px)" srcset="/images/homepage/tablet/image-homepage-hero.jpg 688w,
@@ -16,7 +16,17 @@ import ContactMe from "../components/ContactMe.astro";
                 <source srcset="/images/homepage/mobile/image-homepage-hero.jpg 311w,
                                 /images/homepage/mobile/image-homepage-hero@2x.jpg 622w" />
 
-                <img src="/images/homepage/desktop/image-homepage-hero.jpg" alt="" />
+                <img src="/images/homepage/desktop/image-homepage-hero.jpg" alt="" /> -->
+                <source media="(min-width: 1200px)" srcset="/images/homepage/desktop/homepage-hero.jpg 1110w,
+                                /images/homepage/desktop/homepage-hero@2x.jpg 2220w" />
+
+                <source media="(min-width: 768px)" srcset="/images/homepage/tablet/homepage-hero.jpg 688w,
+                                /images/homepage/tablet/homepage-hero@2x.jpg 1376w" />
+
+                <source srcset="/images/homepage/mobile/homepage-hero.jpg 311w,
+                                /images/homepage/mobile/homepage-hero@2x.jpg 622w" />
+
+                <img src="/images/homepage/desktop/homepage-hero.jpg" alt="" />
             </picture>
         </div>
         <div class="hero__about">
