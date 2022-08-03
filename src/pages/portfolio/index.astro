@@ -5,7 +5,7 @@ import Layout from "../../layouts/Layout.astro";
 <Layout>
     <article class="portfolio-item">
         <div class="img portfolio-img">
-            <picture>
+            <!-- <picture>
                 <source media="(min-width: 1200px)" srcset="/images/portfolio/desktop/image-portfolio-manage.jpg 540w,
                                 /images/portfolio/desktop/image-portfolio-manage@2x.jpg 1080w" sizes="38w" />
 
@@ -16,6 +16,18 @@ import Layout from "../../layouts/Layout.astro";
                                 /images/portfolio/mobile/image-portfolio-manage@2x.jpg 622w" />
 
                 <img src="/images/portfolio/desktop/image-portfolio-manage.jpg" alt="">
+            </picture> -->
+            <picture>
+                <source media="(min-width: 1200px)" srcset="/images/portfolio/desktop/invoice-app.jpg 540w,
+                                /images/portfolio/desktop/invoice-app@2x.jpg 1080w" sizes="38w" />
+
+                <source media="(min-width: 768px)" srcset="/images/portfolio/tablet/invoice-app.jpg 339w,
+                                /images/portfolio/tablet/invoice-app@2x.jpg 678w" sizes="44vw" />
+
+                <source srcset="/images/portfolio/mobile/invoice-app.jpg 311w,
+                                /images/portfolio/mobile/invoice-app@2x.jpg 622w" />
+
+                <img src="/images/portfolio/desktop/invoice-app.jpg" alt="">
             </picture>
         </div>
         <div class="portfolio-content">
