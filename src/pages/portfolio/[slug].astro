@@ -1,0 +1,99 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ContactMe from "../../components/ContactMe.astro";
+import HeroImage from "../../components/HeroImage.astro";
+import PreviewImage from "../../components/PreviewImage.astro";
+import { query } from "../../lib/sanity";
+
+export async function getStaticPaths() {
+    const q = `
+        *[_type == 'project' && enableDetails] { "slug": projectSlug.current }
+    `;
+
+    const projects = await query(q);
+
+    return projects.map(project => ({ params: { slug: project.slug } }));
+}
+
+const { slug } = Astro.request.params;
+
+const q = `
+    *[_type == 'project' && slug == ${slug}] { 
+        title, 
+        details,
+        summary,
+        tags,
+        "previewImage1": { 
+            "url": previewImage1.asset->url,
+            "alt": previewImage1.alt
+        }, 
+        "previewImage2": { 
+            "url": previewImage2.asset->url,
+            "alt": previewImage2.alt
+        },
+        "heroImg": heroImg.asset->url,
+        liveUrl,
+        enableDetails
+    }
+`;
+
+const res = await query(q);
+const project = res[0];
+---
+
+<Layout>
+    <div class="img">
+        <HeroImage image={project.heroImg} />
+    </div>
+
+    <div class="project-grid">
+        <div>
+            <div class="description">
+                <h1 class="description__title h2">{project.title}</h1>
+                <p class="description__body">{project.summary}</p>
+                {project.tags.map(tag => <p class="description__tag">{tag}</p>)}
+                <div>
+                    <a class="btn-link button__secondary" href={project.liveUrl}>
+                        <span class="button__text">View Project</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="overview">
+            <h2 class="overview__title h3">Project Background</h2>
+            <p>
+                {project.details}
+            </p>
+            <h2 class="overview__title h3">Static Previews</h2>
+            <div class="img overview__image">
+                <PreviewImage image={project.previewImage1.url} alt={project.previewImage1.alt} />
+            </div>
+            <div class="img overview__image">
+                <PreviewImage image={project.previewImage2.url} alt={project.previewImage2.alt} />
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="project-links">
+        <div class="project-links__box">
+            <div>
+                <span class="h3">Fylo</span>
+                <span class="project-links__label" id="prev-label">Previous Project</span>
+            </div>
+            <a class="project-links__link" href="/portfolio/fylo" aria-labelledby="prev-label"><img
+                    src="/images/icons/arrow-left.svg" alt=""></a>
+        </div>
+        <div class="project-links__box">
+            <div>
+                <span class="h3">Bookmark</span>
+                <span class="project-links__label" id="next-label">Next Project</span>
+            </div>
+            <a class="project-links__link" href="/portfolio/bookmark" aria-labelledby="next-label"><img
+                    src="/images/icons/arrow-right.svg" alt=""></a>
+        </div>
+    </div> -->
+
+    <div class="project-contact">
+        <ContactMe />
+    </div>
+</Layout>

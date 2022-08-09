@@ -1,0 +1,27 @@
+---
+const { image, title, summary, slug, flipped } = Astro.props;
+---
+
+<article class={flipped ? "portfolio-item--flipped" : "portfolio-item"}>
+    <div class="img portfolio-img">
+        <img srcset={`${image}?w=540&auto=format 540w,
+                      ${image}?w=810&auto=format 810w,
+                      ${image}?auto=format 1080w`}
+             sizes="(min-width: 1200px) 38w,
+                    (min-width: 768px) 44vw,
+                    100vw"
+             src={image} 
+             alt={title} >
+    </div>
+    <div class="portfolio-content">
+        <h1 class="h2">{title}</h1>
+        <p>
+            {summary}
+        </p>
+        <div>
+            <a class="button__secondary" href={`/portfolio/${slug}`}>
+                <span class="button__text">View Project</span>
+            </a>
+        </div>
+    </div>
+</article>

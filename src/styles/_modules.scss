@@ -377,6 +377,10 @@
     opacity: 0.15;
   }
 
+  &::after {
+    margin-top: 1.5rem;
+  }
+
   &__title {
     margin-bottom: 1rem;
 
@@ -568,6 +572,7 @@
     color: var(--pc-3);
     font-weight: var(--fw-bold);
     border: 1px solid var(--pc-3);
+    text-decoration: none;
 
     &:hover:not(:disabled) {
       color: var(--sc-1);
@@ -650,4 +655,9 @@
   font-weight: var(--fw-bold);
   font-family: var(--ff-2);
   color: var(--sc-3);
+}
+
+.btn-link {
+  display: inline-block;
+  text-decoration: none;
 }
