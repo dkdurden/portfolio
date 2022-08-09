@@ -1,7 +1,6 @@
-let PROJECT_ID = import.meta.env.SANITY_PROJECT_ID;
-let DATASET = import.meta.env.SANITY_DATASET;
-
-console.log(PROJECT_ID, DATASET);
+let PROJECT_ID =
+  import.meta.env.SANITY_PROJECT_ID || process.env.SANITY_PROJECT_ID;
+let DATASET = import.meta.env.SANITY_DATASET || process.env.SANITY_DATASET;
 
 export async function query(q) {
   const encodedQuery = encodeURIComponent(q);
