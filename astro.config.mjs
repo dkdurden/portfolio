@@ -5,6 +5,9 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   // Enable the Svelte renderer to support Svelte components.
   renderers: ["@astrojs/renderer-svelte"],
-  site: "https://dustindurden.com",
+  buildOptions: {
+    site: "https://dustindurden.com/",
+    sitemap: true,
+  },
   integrations: [sitemap()],
 });
