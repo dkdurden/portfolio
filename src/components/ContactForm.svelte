@@ -5,7 +5,7 @@
   let msgInvalid = false;
 </script>
 
-<form action="" class:submitted data-netlify="true">
+<form method="POST" class:submitted data-netlify="true">
   <div class="form-group">
     <label for="name">Name</label>
     <input
