@@ -2,5 +2,15 @@
 const { image, alt } = Astro.props;
 ---
 
-<img srcset={`${image}?auto=format&w=635 635w, ${image}?auto=format&w=952 952w, ${image}?auto=format 1270w`}
-    sizes="(min-width: 1200px) 44vw, 100vw" src={image} alt={alt}>
+<img
+    srcset={`${image}?auto=format&w=635 635w, ${image}?auto=format&w=952 952w, ${image}?auto=format 1270w`}
+    sizes="(min-width: 1200px) 44vw, 100vw"
+    src={image}
+    alt={alt}
+/>
+
+<style>
+    img {
+        aspect-ratio: 127 / 80;
+    }
+</style>
