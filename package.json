@@ -13,6 +13,7 @@
     "astro": "^0.24.3"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^1.0.0",
     "sass": "^1.49.9"
   }
 }
