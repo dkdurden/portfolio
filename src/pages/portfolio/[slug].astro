@@ -41,7 +41,7 @@ const res = await query(q);
 const project = res[0];
 ---
 
-<Layout>
+<Layout title={`${project.title} - Dustin Durden`}>
     <div class="img">
         <HeroImage image={project.heroImg} />
     </div>

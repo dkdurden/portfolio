@@ -84,6 +84,15 @@
   }
 }
 
+.hero,
+.about-me {
+  a {
+    display: inline-flex;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
 .hero {
   position: relative;
 

@@ -15,7 +15,7 @@ const q = `
 const projects = await query(q);
 ---
 
-<Layout>
+<Layout title="Portfolio - Dustin Durden">
     {projects.map((project, index) =>
     <ProjectBrief {...project} flipped={index % 2 !=0} />)}
 </Layout>

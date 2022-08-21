@@ -25,14 +25,14 @@ const profile = data.profileData[0];
 const project = data.projectData[0];
 ---
 
-<Layout>
+<Layout title="Dustin Durden - Web Developer">
     <div class="hero">
         <div class="img">
             <HeroImage image={project.image} alt={project.title} />
         </div>
         <div class="hero__about">
             <h1 class="h2 h1-lg">{profile.headline}</h1>
-            <button class="button__primary">
+            <a class="button__primary" href="#about-me">
                 <span class="button__toggle">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
                         <g fill="none" fill-rule="evenodd" stroke="#5FB4A2">
@@ -43,7 +43,7 @@ const project = data.projectData[0];
                     </svg>
                 </span>
                 <span class="button__text">About Me</span>
-            </button>
+            </a>
         </div>
     </div>
 
@@ -60,14 +60,16 @@ const project = data.projectData[0];
                 <img src={`${profile.image}?auto=format`} alt={profile.imageAlt} />
             </picture>
         </div>
-        <div class="about-me__content">
+        <div class="about-me__content" id="about-me">
             <h2>About Me</h2>
             <p>
                 {profile.aboutMe}
             </p>
-            <button class="button__secondary">
-                <span class="button__text">Go To Portfolio</span>
-            </button>
+            <div>
+                <a class="button__secondary" href="/portfolio">
+                    <span class="button__text">Go To Portfolio</span>
+                </a>
+            </div>
         </div>
     </div>
 
