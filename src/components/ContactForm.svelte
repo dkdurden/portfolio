@@ -6,6 +6,7 @@
 </script>
 
 <form name="contact" method="POST" class:submitted data-netlify="true">
+  <input type="hidden" name="form-name" value="contact" />
   <div class="form-group">
     <label for="name">Name</label>
     <input
