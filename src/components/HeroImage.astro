@@ -2,5 +2,8 @@
 const { image, alt } = Astro.props;
 ---
 
-<img srcset={`${image}?w=555&auto=format 555w, ${image}?w=1110&auto=format 1110w, ${image}?w=2220&auto=format 2220w`}
-    src={image} alt={alt}>
+<img
+    srcset={`${image}?w=555&auto=format 555w, ${image}?w=1110&auto=format 1110w, ${image}?w=2220&auto=format 2220w`}
+    src={image}
+    alt={alt}
+/>

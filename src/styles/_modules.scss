@@ -96,6 +96,10 @@
 .hero {
   position: relative;
 
+  .img img {
+    aspect-ratio: 11 / 6;
+  }
+
   &__about {
     bottom: 0;
     max-width: 445px;

@@ -34,11 +34,15 @@ const project = data.projectData[0];
             <h1 class="h2 h1-lg">{profile.headline}</h1>
             <a class="button__primary" href="#about-me">
                 <span class="button__toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="14"
+                    >
                         <g fill="none" fill-rule="evenodd" stroke="#5FB4A2">
-                            <path d="M0 9l8 4 8-4" />
-                            <path opacity=".5" d="M0 5l8 4 8-4" />
-                            <path opacity=".25" d="M0 1l8 4 8-4" />
+                            <path d="M0 9l8 4 8-4"></path>
+                            <path opacity=".5" d="M0 5l8 4 8-4"></path>
+                            <path opacity=".25" d="M0 1l8 4 8-4"></path>
                         </g>
                     </svg>
                 </span>
@@ -50,14 +54,32 @@ const project = data.projectData[0];
     <div class="about-me">
         <div class="img">
             <picture>
-                <source media="(min-width: 1200px)" srcset={`${profile.image}?auto=format`} />
+                <source
+                    media="(min-width: 1200px)"
+                    srcset={`${profile.image}?auto=format`}
+                    width="540"
+                    height="600"
+                />
 
-                <source media="(min-width: 768px)"
-                    srcset={`${profile.image}?w=281&h=600&fit=crop&crop=center&auto=format 281w`} />
+                <source
+                    media="(min-width: 768px)"
+                    srcset={`${profile.image}?w=281&h=600&fit=crop&crop=center&auto=format 281w`}
+                    width="281"
+                    height="600"
+                />
 
-                <source srcset={`${profile.image}?auto=format`} />
+                <source
+                    srcset={`${profile.image}?auto=format`}
+                    width="540"
+                    height="600"
+                />
 
-                <img src={`${profile.image}?auto=format`} alt={profile.imageAlt} />
+                <img
+                    src={`${profile.image}?auto=format`}
+                    alt={profile.imageAlt}
+                    width="540"
+                    height="600"
+                />
             </picture>
         </div>
         <div class="about-me__content" id="about-me">
